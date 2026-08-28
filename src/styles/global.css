@@ -93,11 +93,11 @@ ul { margin: 0; padding: 0; }
 .menu-button { display: none; width: 50px; height: 50px; place-items: center; border: 0; color: var(--espresso); background: transparent; cursor: pointer; }
 .menu-close { display: none; }
 
-.hero { min-height: 760px; display: grid; align-items: stretch; color: var(--white); background: var(--espresso); }
-.hero__media { position: absolute; inset: 0; overflow: hidden; }
+.hero { position: relative; min-height: 760px; display: grid; overflow: hidden; align-items: stretch; color: var(--white); background: var(--espresso); isolation: isolate; }
+.hero__media { position: absolute; z-index: 0; inset: 0; overflow: hidden; }
 .hero__media::after { position: absolute; inset: 0; background: rgb(29 22 18 / 62%); content: ''; }
 .hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 48%; }
-.hero__inner { position: relative; display: grid; min-height: 760px; align-content: center; padding-top: 6rem; padding-bottom: 6rem; }
+.hero__inner { position: relative; z-index: 1; display: grid; min-height: 760px; align-content: center; padding-top: 6rem; padding-bottom: 6rem; }
 .hero__content { max-width: 900px; }
 .hero h1 { max-width: 850px; margin-bottom: 1.4rem; }
 .hero .eyebrow { color: #e2c89f; }
@@ -149,6 +149,7 @@ ul { margin: 0; padding: 0; }
 .cta-section h2 { max-width: 720px; font-size: clamp(2.5rem, 5vw, 4.8rem); }
 .cta-section p:not(.eyebrow) { max-width: 620px; margin: 1.2rem 0 0; color: #dce5e0; }
 .cta-section__actions { display: flex; flex-direction: column; align-items: flex-start; gap: 1.3rem; }
+.cta-section .button--light:hover { color: var(--white); background: var(--espresso); border-color: var(--espresso); }
 
 .page-hero { padding: clamp(5rem, 10vw, 9rem) 0; background: var(--ivory); border-bottom: 1px solid var(--line); }
 .page-hero h1 { max-width: 900px; font-size: clamp(3rem, 6vw, 5.5rem); }

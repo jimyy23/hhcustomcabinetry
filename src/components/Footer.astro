@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/logo-stacked.png';
+import { business, navItems } from '../data/site';
+---
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <Image src={logo} alt="H & H Cabinet" width={190} />
+      <p>Custom cabinetry designed around your space, your style, and the way you live.</p>
+    </div>
+    <div>
+      <h2>Explore</h2>
+      <ul>{navItems.map((item) => <li><a href={item.href}>{item.label}</a></li>)}</ul>
+    </div>
+    <div>
+      <h2>Visit or call</h2>
+      <address>
+        <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer">3218 Wharton Way<br />Mississauga, ON L4X 2C1<span class="sr-only"> (opens in a new tab)</span></a><br />
+        <a href={business.phoneHref}>{business.phone}</a><br />
+        <a href={`mailto:${business.email}`}>{business.email}</a>
+      </address>
+    </div>
+    <div>
+      <h2>Start your project</h2>
+      <p>Tell us what you have in mind or reserve a time to visit.</p>
+      <div class="footer-actions">
+        <a href={business.quoteUrl} target="_blank" rel="noopener noreferrer">Request a quote <span aria-hidden="true">↗</span></a>
+        <a href={business.bookingUrl} target="_blank" rel="noopener noreferrer">Book an appointment <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {new Date().getFullYear()} H & H Cabinet. All rights reserved.</p>
+    <p>{business.legalName}</p>
+  </div>
+</footer>
+

@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/logo-horizontal.png';
+import { business, navItems } from '../data/site';
+import Icon from './Icon.astro';
+
+const currentPath = Astro.url.pathname;
+const isActive = (href: string) => href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+---
+<header class="site-header">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="announcement">
+    <div class="container announcement__inner">
+      <span>Custom cabinetry in Mississauga</span>
+      <a href={business.phoneHref}><Icon name="phone" size={16} /> {business.phone}</a>
+    </div>
+  </div>
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="H & H Cabinet home">
+      <Image src={logo} alt="H & H Cabinet" width={260} loading="eager" />
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu">
+      <span class="menu-open"><Icon name="menu" size={28} /></span>
+      <span class="menu-close"><Icon name="close" size={28} /></span>
+    </button>
+    <nav id="site-navigation" class="main-nav" aria-label="Main navigation">
+      <ul>
+        {navItems.map((item) => (
+          <li><a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a></li>
+        ))}
+      </ul>
+      <a class="button button--small" href={business.quoteUrl} target="_blank" rel="noopener noreferrer">Get a free quote <span class="sr-only">(opens in a new tab)</span></a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('.menu-button');
+  const nav = document.querySelector<HTMLElement>('.main-nav');
+  button?.addEventListener('click', () => {
+    const open = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!open));
+    button.setAttribute('aria-label', open ? 'Open navigation menu' : 'Close navigation menu');
+    nav?.classList.toggle('is-open', !open);
+    document.body.classList.toggle('menu-is-open', !open);
+  });
+</script>
+

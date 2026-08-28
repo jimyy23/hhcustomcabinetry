@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import Icon from '../components/Icon.astro';
+import { galleryItems } from '../data/gallery';
+---
+<BaseLayout title="Project Gallery" description="Browse custom kitchens, bathroom vanities, built-ins, wine rooms, mudrooms, and storage projects by H & H Cabinet in Mississauga.">
+  <header class="page-hero"><div class="container"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Gallery</span></nav><p class="eyebrow">Our work</p><h1>Craftsmanship, made visible.</h1><p class="lede">A collection of cabinetry designed for real homes—from refined kitchens to highly personal storage.</p></div></header>
+  <section class="section" aria-labelledby="gallery-title">
+    <div class="container">
+      <h2 id="gallery-title" class="sr-only">Cabinetry project gallery</h2>
+      <div class="gallery-grid">
+        {galleryItems.map((item, index) => (
+          <figure class="gallery-item">
+            <button type="button" class="gallery-trigger" data-alt={item.alt} aria-label={`Enlarge ${item.label}`}>
+              <Image src={item.src} alt={item.alt} widths={[420, 700, 1000]} sizes="(max-width: 520px) calc(100vw - 32px), (max-width: 760px) 50vw, 33vw" loading={index < 4 ? 'eager' : 'lazy'} />
+              <span class="gallery-item__caption">{item.label}</span>
+            </button>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+  <dialog class="lightbox" aria-label="Enlarged project image">
+    <img class="lightbox__image" src="" alt="" />
+    <div class="lightbox__bar"><span class="lightbox__caption"></span><button class="lightbox__close" type="button" aria-label="Close enlarged image"><Icon name="close" /></button></div>
+  </dialog>
+  <CTA title="Have a space in mind?" text="Share your ideas with us and begin a custom cabinetry plan for your home." />
+</BaseLayout>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('.lightbox');
+  const dialogImage = dialog?.querySelector<HTMLImageElement>('.lightbox__image');
+  const dialogCaption = dialog?.querySelector<HTMLElement>('.lightbox__caption');
+  const closeButton = dialog?.querySelector<HTMLButtonElement>('.lightbox__close');
+  document.querySelectorAll<HTMLButtonElement>('.gallery-trigger').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const source = trigger.querySelector<HTMLImageElement>('img');
+      if (!dialog || !dialogImage || !source) return;
+      dialogImage.src = source.currentSrc || source.src;
+      dialogImage.alt = trigger.dataset.alt || '';
+      if (dialogCaption) dialogCaption.textContent = trigger.querySelector('.gallery-item__caption')?.textContent || '';
+      dialog.showModal();
+    });
+  });
+  closeButton?.addEventListener('click', () => dialog?.close());
+  dialog?.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+</script>
+

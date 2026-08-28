@@ -4,7 +4,7 @@ A static Astro website for H & H Cabinet in Mississauga, Ontario. It is designed
 
 ## Local development
 
-Requires Node.js 20.3 or newer.
+Requires Node.js 22.12 or newer. Node.js 24 LTS is recommended for Cloudflare Pages.
 
 ```sh
 npm install

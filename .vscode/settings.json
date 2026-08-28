@@ -1,0 +1,8 @@
+{
+  "remote.portsAttributes": {
+    "4321": {
+      "label": "H & H Cabinet Astro Preview",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}

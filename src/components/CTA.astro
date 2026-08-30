@@ -16,8 +16,7 @@ const {
     </div>
     <div class="cta-section__actions">
       <a class="button button--light" href={business.quoteUrl} target="_blank" rel="noopener noreferrer">Get a free quote <Icon name="arrow" /><span class="sr-only"> (opens in a new tab)</span></a>
-      <a class="text-link text-link--light" href={business.bookingUrl} target="_blank" rel="noopener noreferrer"><Icon name="calendar" /> Book an appointment <span class="sr-only">(opens in a new tab)</span></a>
+      <a class="text-link text-link--light" href={business.bookingUrl} data-booking-link aria-haspopup="dialog"><Icon name="calendar" /> Book an appointment</a>
     </div>
   </div>
 </section>
-

@@ -14,9 +14,9 @@ import { business, navItems } from '../data/site';
       <ul>{navItems.map((item) => <li><a href={item.href}>{item.label}</a></li>)}</ul>
     </div>
     <div>
-      <h2>Visit or call</h2>
+      <h2>Showroom</h2>
       <address>
-        <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer">3218 Wharton Way<br />Mississauga, ON L4X 2C1<span class="sr-only"> (opens in a new tab)</span></a><br />
+        <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer">Showroom address:<br />3218 Wharton Way<br />Mississauga, ON L4X 2C1<span class="sr-only"> (opens in a new tab)</span></a><br />
         <a href={business.phoneHref}>{business.phone}</a><br />
         <a href={`mailto:${business.email}`}>{business.email}</a>
       </address>
@@ -26,7 +26,7 @@ import { business, navItems } from '../data/site';
       <p>Tell us what you have in mind or reserve a time to visit.</p>
       <div class="footer-actions">
         <a href={business.quoteUrl} target="_blank" rel="noopener noreferrer">Request a quote <span aria-hidden="true">↗</span></a>
-        <a href={business.bookingUrl} target="_blank" rel="noopener noreferrer">Book an appointment <span aria-hidden="true">↗</span></a>
+        <a href={business.bookingUrl} data-booking-link aria-haspopup="dialog">Book an appointment</a>
       </div>
     </div>
   </div>

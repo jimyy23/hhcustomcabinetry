@@ -1,0 +1,36 @@
+---
+import { business } from '../data/site';
+---
+<dialog class="booking-dialog" id="booking-notice" aria-labelledby="booking-notice-title" aria-describedby="booking-notice-description">
+  <div class="booking-dialog__content">
+    <p class="eyebrow">Before you continue</p>
+    <h2 id="booking-notice-title">Appointment request</h2>
+    <div id="booking-notice-description">
+      <p>Selecting a date and time through our calendar submits an appointment request only. Your appointment is not confirmed at that stage.</p>
+      <p>A member of our team will contact you by email or phone to discuss your project needs and confirm the exact date and time.</p>
+    </div>
+    <div class="booking-dialog__actions">
+      <a class="button" href={business.bookingUrl} target="_blank" rel="noopener noreferrer">Continue to calendar <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+      <button class="button button--outline booking-dialog__cancel" type="button">Cancel</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+  const bookingDialog = document.querySelector<HTMLDialogElement>('#booking-notice');
+  const cancelBooking = bookingDialog?.querySelector<HTMLButtonElement>('.booking-dialog__cancel');
+  const continueBooking = bookingDialog?.querySelector<HTMLAnchorElement>('.booking-dialog__actions a');
+
+  document.querySelectorAll<HTMLAnchorElement>('[data-booking-link]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      bookingDialog?.showModal();
+    });
+  });
+
+  cancelBooking?.addEventListener('click', () => bookingDialog?.close());
+  continueBooking?.addEventListener('click', () => bookingDialog?.close());
+  bookingDialog?.addEventListener('click', (event) => {
+    if (event.target === bookingDialog) bookingDialog.close();
+  });
+</script>

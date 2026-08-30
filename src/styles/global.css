@@ -181,6 +181,14 @@ ul { margin: 0; padding: 0; }
 .lightbox__bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; color: var(--white); }
 .lightbox__close { width: 44px; height: 44px; border: 1px solid #75675f; color: var(--white); background: transparent; cursor: pointer; }
 
+.booking-dialog { width: min(calc(100% - 32px), 660px); max-height: calc(100vh - 32px); padding: 0; border: 0; color: var(--espresso); background: var(--paper); box-shadow: var(--shadow); }
+.booking-dialog::backdrop { background: rgb(20 15 12 / 78%); }
+.booking-dialog__content { padding: clamp(2rem, 6vw, 4rem); }
+.booking-dialog h2 { margin-bottom: 1.4rem; font-size: clamp(2.2rem, 5vw, 3.6rem); }
+.booking-dialog p:not(.eyebrow) { color: var(--muted); }
+.booking-dialog__actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+.booking-dialog__cancel { cursor: pointer; }
+
 .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
 .stat { padding: 2.5rem; background: var(--paper); }
 .stat strong { display: block; margin-bottom: .4rem; color: var(--sage-dark); font-family: var(--serif); font-size: 3rem; font-weight: 400; line-height: 1; }

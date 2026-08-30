@@ -5,7 +5,7 @@ export const business = {
   phoneHref: 'tel:+16472965035',
   email: 'info@hhcustomcabinetry.ca',
   address: '3218 Wharton Way, Mississauga, ON L4X 2C1',
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=3218+Wharton+Way+Mississauga+ON+L4X+2C1',
+  mapsUrl: 'https://g.page/r/Ca7gNl4WsWvhEBM/',
   quoteUrl: 'https://forms.gle/JT1WhXag7zr2zA6SA',
   bookingUrl: 'https://calendar.app.google/NGs2aarphHbUTMZJ6',
   siteUrl: 'https://hhcustomcabinetry.ca',

@@ -5,7 +5,7 @@ import CTA from '../components/CTA.astro';
 import Icon from '../components/Icon.astro';
 import { galleryItems } from '../data/gallery';
 ---
-<BaseLayout title="Project Gallery" description="Browse custom kitchens, bathroom vanities, built-ins, wine rooms, mudrooms, and storage projects by H & H Cabinet in Mississauga.">
+<BaseLayout title="Project Gallery" description="Browse custom kitchens, bathroom vanities, built-ins, wine rooms, mudrooms, and storage projects by H & H Custom Cabinetry in Mississauga.">
   <header class="page-hero"><div class="container"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Gallery</span></nav><p class="eyebrow">Our work</p><h1>Craftsmanship, made visible.</h1><p class="lede">A collection of cabinetry designed for real homes—from refined kitchens to highly personal storage.</p></div></header>
   <section class="section" aria-labelledby="gallery-title">
     <div class="container">
@@ -47,4 +47,3 @@ import { galleryItems } from '../data/gallery';
   closeButton?.addEventListener('click', () => dialog?.close());
   dialog?.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
 </script>
-

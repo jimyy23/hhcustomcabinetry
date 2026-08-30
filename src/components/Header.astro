@@ -16,8 +16,8 @@ const isActive = (href: string) => href === '/' ? currentPath === '/' : currentP
     </div>
   </div>
   <div class="container nav-wrap">
-    <a class="brand" href="/" aria-label="H & H Cabinet home">
-      <Image src={logo} alt="H & H Cabinet" width={260} loading="eager" />
+    <a class="brand" href="/" aria-label={`${business.name} home`}>
+      <Image src={logo} alt={business.name} width={280} loading="eager" />
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation menu">
       <span class="menu-open"><Icon name="menu" size={28} /></span>
@@ -45,4 +45,3 @@ const isActive = (href: string) => href === '/' ? currentPath === '/' : currentP
     document.body.classList.toggle('menu-is-open', !open);
   });
 </script>
-

@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { business } from '../data/site';
 import '../styles/global.css';
 
 interface Props {
@@ -8,17 +9,17 @@ interface Props {
   description: string;
   image?: string;
 }
-const { title, description, image = '/apple-touch-icon.png' } = Astro.props;
+const { title, description, image = '/og-image.jpg' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const pageTitle = title === 'H & H Cabinet' ? title : `${title} | H & H Cabinet`;
+const pageTitle = title === business.name ? title : `${title} | ${business.name}`;
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'HomeAndConstructionBusiness',
-  name: 'H & H Cabinet',
+  name: business.name,
   legalName: '9313796 Canada Inc.',
-  url: 'https://hhcustomcabinetry.onid.ca',
+  url: business.siteUrl,
   telephone: '+1-647-296-5035',
-  email: 'info@hhcustomcabinetry.onid.ca',
+  email: business.email,
   address: {
     '@type': 'PostalAddress',
     streetAddress: '3218 Wharton Way',
@@ -42,7 +43,7 @@ const jsonLd = {
     <link rel="icon" href="/apple-touch-icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="H & H Cabinet" />
+    <meta property="og:site_name" content={business.name} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />

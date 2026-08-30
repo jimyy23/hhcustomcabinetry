@@ -1,14 +1,14 @@
 export const business = {
-  name: 'H & H Cabinet',
+  name: 'H & H Custom Cabinetry',
   legalName: '9313796 Canada Inc.',
   phone: '647-296-5035',
   phoneHref: 'tel:+16472965035',
-  email: 'info@hhcustomcabinetry.onid.ca',
+  email: 'info@hhcustomcabinetry.ca',
   address: '3218 Wharton Way, Mississauga, ON L4X 2C1',
   mapsUrl: 'https://www.google.com/maps/search/?api=1&query=3218+Wharton+Way+Mississauga+ON+L4X+2C1',
-  quoteUrl: 'https://docs.google.com/forms/d/e/FORM_ID/viewform',
-  bookingUrl: 'https://calendar.google.com/calendar/appointments/schedules/APPOINTMENT_SCHEDULE_ID',
-  siteUrl: 'https://hhcustomcabinetry.onid.ca',
+  quoteUrl: 'https://forms.gle/JT1WhXag7zr2zA6SA',
+  bookingUrl: 'https://calendar.app.google/NGs2aarphHbUTMZJ6',
+  siteUrl: 'https://hhcustomcabinetry.ca',
 };
 
 export const navItems = [
@@ -18,4 +18,3 @@ export const navItems = [
   { href: '/about/', label: 'About' },
   { href: '/contact/', label: 'Contact' },
 ];
-

@@ -1,6 +1,6 @@
-# H & H Cabinet website
+# H & H Custom Cabinetry website
 
-A static Astro website for H & H Cabinet in Mississauga, Ontario. It is designed to deploy directly from a Git repository to Cloudflare Pages.
+A static Astro website for H & H Custom Cabinetry in Mississauga, Ontario. It is designed to deploy directly from a Git repository to Cloudflare Pages.
 
 ## Preview locally
 
@@ -50,12 +50,9 @@ Cloudflare Pages should use:
 - Output directory: `dist`
 - Node.js version: `24`
 
-## Before launch
+## Contact actions
 
-Replace the two placeholder URLs in `src/data/site.ts`:
-
-- `quoteUrl`: the published Google Form URL used by **Get a free quote** and contact actions
-- `bookingUrl`: the published Google Calendar appointment schedule URL
+The Google contact form and Google Calendar booking URL are configured in `src/data/site.ts` as `quoteUrl` and `bookingUrl`.
 
 The business phone, email, address, navigation, and external links are also maintained in this file.
 

@@ -6,7 +6,7 @@ import { business, navItems } from '../data/site';
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <Image src={logo} alt="H & H Cabinet" width={190} />
+      <Image src={logo} alt={business.name} width={190} />
       <p>Custom cabinetry designed around your space, your style, and the way you live.</p>
     </div>
     <div>
@@ -31,7 +31,7 @@ import { business, navItems } from '../data/site';
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>© {new Date().getFullYear()} H & H Cabinet. All rights reserved.</p>
+    <p>© {new Date().getFullYear()} {business.name}. All rights reserved.</p>
     <p>{business.legalName}</p>
     <p>Designed by <a href="https://alstra.ca/" target="_blank" rel="noopener noreferrer">Alstra Solutions<span class="sr-only"> (opens in a new tab)</span></a></p>
   </div>

@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://hhcustomcabinetry.onid.ca',
+  site: 'https://hhcustomcabinetry.ca',
   output: 'static',
   integrations: [sitemap()],
   image: {

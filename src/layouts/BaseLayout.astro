@@ -28,7 +28,10 @@ const jsonLd = {
     postalCode: 'L4X 2C1',
     addressCountry: 'CA',
   },
-  areaServed: 'Mississauga, Ontario',
+  areaServed: {
+    '@type': 'AdministrativeArea',
+    name: 'Greater Toronto and Hamilton Area',
+  },
 };
 ---
 <!doctype html>

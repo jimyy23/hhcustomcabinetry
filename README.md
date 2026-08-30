@@ -1,6 +1,6 @@
 # H & H Custom Cabinetry website
 
-A static Astro website for H & H Custom Cabinetry in Mississauga, Ontario. It is designed to deploy directly from a Git repository to Cloudflare Pages.
+A static Astro website for H & H Custom Cabinetry, based in Mississauga and serving the Greater Toronto and Hamilton Area. It is designed to deploy directly from a Git repository to Cloudflare Pages.
 
 ## Preview locally
 

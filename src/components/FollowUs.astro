@@ -1,0 +1,27 @@
+---
+import SocialLinks from './SocialLinks.astro';
+
+interface Props {
+  title?: string;
+  text?: string;
+  compact?: boolean;
+}
+
+const {
+  title = 'Follow our latest work.',
+  text = 'See recent cabinetry projects, details, and inspiration from homes across the GTHA.',
+  compact = false,
+} = Astro.props;
+const pageName = Astro.url.pathname.split('/').filter(Boolean).at(-1) ?? 'home';
+const headingId = `follow-title-${pageName}`;
+---
+<section id="follow-us" class:list={['follow-section', { 'follow-section--compact': compact }]} aria-labelledby={headingId}>
+  <div class="container follow-section__inner">
+    <div>
+      <p class="eyebrow">Connect with us</p>
+      <h2 id={headingId}>{title}</h2>
+      <p>{text}</p>
+    </div>
+    <SocialLinks labels />
+  </div>
+</section>

@@ -8,6 +8,8 @@ export const business = {
   mapsUrl: 'https://g.page/r/Ca7gNl4WsWvhEBM/',
   quoteUrl: 'https://forms.gle/JT1WhXag7zr2zA6SA',
   bookingUrl: 'https://calendar.app.google/NGs2aarphHbUTMZJ6',
+  instagramUrl: 'https://www.instagram.com/hhcustomcabinetry.ca',
+  facebookUrl: 'https://www.facebook.com/people/H-H-Custom-Cabinetry/61593956082164/',
   siteUrl: 'https://hhcustomcabinetry.ca',
 };
 

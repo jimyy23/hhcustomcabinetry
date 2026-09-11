@@ -1,0 +1,25 @@
+---
+import { business } from '../data/site';
+import Icon from './Icon.astro';
+
+interface Props {
+  labels?: boolean;
+  light?: boolean;
+  label?: string;
+}
+
+const { labels = false, light = false, label = 'Follow H & H Custom Cabinetry' } = Astro.props;
+const networks = [
+  { name: 'Instagram', href: business.instagramUrl, icon: 'instagram' as const },
+  { name: 'Facebook', href: business.facebookUrl, icon: 'facebook' as const },
+];
+---
+<nav class:list={['social-links', { 'social-links--labels': labels, 'social-links--light': light }]} aria-label={label}>
+  {networks.map((network) => (
+    <a href={network.href} target="_blank" rel="noopener noreferrer" aria-label={`${network.name} (opens in a new tab)`}>
+      <Icon name={network.icon} size={labels ? 22 : 18} />
+      {labels && <span>{network.name}</span>}
+    </a>
+  ))}
+</nav>
+

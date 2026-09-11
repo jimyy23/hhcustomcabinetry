@@ -2,12 +2,14 @@
 import { Image } from 'astro:assets';
 import logo from '../assets/brand/logo-stacked.png';
 import { business, navItems } from '../data/site';
+import SocialLinks from './SocialLinks.astro';
 ---
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
       <Image src={logo} alt={business.name} width={190} />
       <p>Custom cabinetry designed around your space, your style, and the way you live—across the GTHA.</p>
+      <SocialLinks light label="Follow H & H Custom Cabinetry" />
     </div>
     <div>
       <h2>Explore</h2>

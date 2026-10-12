@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://hhcustomcabinetry.ca/api/v1/business.json",
+      "service-desc": [
+        {
+          "href": "https://hhcustomcabinetry.ca/openapi.json",
+          "type": "application/vnd.oai.openapi+json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://hhcustomcabinetry.ca/api-docs.md",
+          "type": "text/markdown"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://hhcustomcabinetry.ca/api/status.json",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}

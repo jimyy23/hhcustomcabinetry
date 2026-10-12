@@ -28,3 +28,5 @@
 - [Full site reference](https://hhcustomcabinetry.ca/llms-full.txt)
 - [Agent capability catalog](https://hhcustomcabinetry.ca/.well-known/ai-catalog.json)
 - [Agent skills index](https://hhcustomcabinetry.ca/.well-known/agent-skills/index.json)
+- [Public business information API](https://hhcustomcabinetry.ca/api/v1/business.json)
+- [OpenAPI description](https://hhcustomcabinetry.ca/openapi.json)

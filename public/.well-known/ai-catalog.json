@@ -6,6 +6,17 @@
   },
   "entries": [
     {
+      "identifier": "urn:air:hhcustomcabinetry.ca:api:business-information",
+      "displayName": "H & H Custom Cabinetry Business Information API",
+      "type": "application/vnd.oai.openapi+json",
+      "url": "https://hhcustomcabinetry.ca/openapi.json",
+      "representativeQueries": [
+        "Get verified contact details for H & H Custom Cabinetry",
+        "Find the official quote and appointment request links",
+        "What services and areas does H & H Custom Cabinetry cover?"
+      ]
+    },
+    {
       "identifier": "urn:air:hhcustomcabinetry.ca:skill:cabinetry-project-inquiries",
       "displayName": "Cabinetry Project Inquiries",
       "type": "text/markdown",

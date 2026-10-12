@@ -58,6 +58,7 @@ The site publishes machine-readable business information and agent discovery res
 - Markdown representations of the five main pages when a request sends `Accept: text/markdown`
 - `/.well-known/ai-catalog.json` for Agentic Resource Discovery (ARD)
 - `/.well-known/agent-skills/index.json` and the cabinetry-inquiry skill
+- `/.well-known/api-catalog`, `/openapi.json`, and the public read-only business information API
 - RFC 8288 discovery links in both HTTP response headers and HTML metadata
 - WebMCP tools for verified business information, quote requests, and appointment requests
 - Content Signals in `/robots.txt`
@@ -86,6 +87,8 @@ curl -i -H 'Accept: text/markdown' https://hhcustomcabinetry.ca/
 curl https://hhcustomcabinetry.ca/robots.txt
 curl https://hhcustomcabinetry.ca/.well-known/ai-catalog.json
 curl https://hhcustomcabinetry.ca/.well-known/agent-skills/index.json
+curl https://hhcustomcabinetry.ca/.well-known/api-catalog
+curl https://hhcustomcabinetry.ca/api/v1/business.json
 ```
 
 ## Contact actions

@@ -11,6 +11,8 @@ const MARKDOWN_ROUTES = new Map([
 ]);
 
 const DISCOVERY_LINKS = [
+  '</.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"',
+  '</openapi.json>; rel="service-desc"; type="application/vnd.oai.openapi+json"',
   '</.well-known/ai-catalog.json>; rel="describedby"; type="application/json"',
   '</.well-known/agent-skills/index.json>; rel="describedby"; type="application/json"',
 ].join(', ');

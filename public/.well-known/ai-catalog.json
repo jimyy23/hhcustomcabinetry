@@ -1,0 +1,31 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "H & H Custom Cabinetry",
+    "identifier": "did:web:hhcustomcabinetry.ca"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:hhcustomcabinetry.ca:skill:cabinetry-project-inquiries",
+      "displayName": "Cabinetry Project Inquiries",
+      "type": "text/markdown",
+      "url": "https://hhcustomcabinetry.ca/.well-known/agent-skills/cabinetry-project-inquiries/SKILL.md",
+      "representativeQueries": [
+        "How can I request a quote for custom kitchen cabinets?",
+        "How do I request a showroom appointment?",
+        "Where is the H & H Custom Cabinetry showroom?"
+      ]
+    },
+    {
+      "identifier": "urn:air:hhcustomcabinetry.ca:document:business-reference",
+      "displayName": "H & H Custom Cabinetry Business Reference",
+      "type": "text/plain",
+      "url": "https://hhcustomcabinetry.ca/llms-full.txt",
+      "representativeQueries": [
+        "What cabinetry services does H & H Custom Cabinetry offer?",
+        "What areas does H & H Custom Cabinetry serve?",
+        "How can I contact H & H Custom Cabinetry?"
+      ]
+    }
+  ]
+}

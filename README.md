@@ -50,6 +50,44 @@ Cloudflare Pages should use:
 - Output directory: `dist`
 - Node.js version: `24`
 
+## Agent discovery
+
+The site publishes machine-readable business information and agent discovery resources:
+
+- `/llms.txt` and `/llms-full.txt`
+- Markdown representations of the five main pages when a request sends `Accept: text/markdown`
+- `/.well-known/ai-catalog.json` for Agentic Resource Discovery (ARD)
+- `/.well-known/agent-skills/index.json` and the cabinetry-inquiry skill
+- RFC 8288 discovery links in both HTTP response headers and HTML metadata
+- WebMCP tools for verified business information, quote requests, and appointment requests
+- Content Signals in `/robots.txt`
+
+Markdown negotiation is implemented by `functions/_middleware.js` for Cloudflare Pages. The middleware returns HTML normally and serves the corresponding Markdown asset only when a client explicitly requests `text/markdown`.
+
+### Cloudflare DNS follow-up
+
+DNS-AID cannot be configured from the repository. In the Cloudflare dashboard, enable DNSSEC and add this experimental discovery record only if the zone accepts SVCB records:
+
+```text
+Type: SVCB
+Name: _index._agents
+Priority: 1
+Target: hhcustomcabinetry.ca
+Parameters: alpn="h2,h3" port=443
+```
+
+DNS-AID is still an Internet-Draft. Do not publish `_a2a` or `_mcp` records unless real A2A or MCP endpoints are deployed.
+
+After deployment, validate the production site with:
+
+```sh
+curl -I https://hhcustomcabinetry.ca/
+curl -i -H 'Accept: text/markdown' https://hhcustomcabinetry.ca/
+curl https://hhcustomcabinetry.ca/robots.txt
+curl https://hhcustomcabinetry.ca/.well-known/ai-catalog.json
+curl https://hhcustomcabinetry.ca/.well-known/agent-skills/index.json
+```
+
 ## Contact actions
 
 The Google contact form and Google Calendar booking URL are configured in `src/data/site.ts` as `quoteUrl` and `bookingUrl`.

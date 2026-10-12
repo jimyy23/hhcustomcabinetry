@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BookingNotice from '../components/BookingNotice.astro';
+import WebMCP from '../components/WebMCP.astro';
 import { business } from '../data/site';
 import '../styles/global.css';
 
@@ -12,6 +13,7 @@ interface Props {
 }
 const { title, description, image = '/og-image.jpg' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const markdownPage = Astro.url.pathname.split('/').filter(Boolean).at(-1) ?? 'home';
 const pageTitle = title === business.name ? title : `${title} | ${business.name}`;
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -45,6 +47,8 @@ const jsonLd = {
     <meta name="theme-color" content="#f5f0e8" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="text/markdown" href={`/agent-content/${markdownPage}.md`} />
+    <link rel="ai-catalog" type="application/json" href="/.well-known/ai-catalog.json" />
     <link rel="icon" href="/apple-touch-icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
@@ -62,5 +66,6 @@ const jsonLd = {
     <main id="main-content"><slot /></main>
     <Footer />
     <BookingNotice />
+    <WebMCP />
   </body>
 </html>

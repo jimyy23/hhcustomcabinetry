@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "cabinetry-project-inquiries",
+      "type": "skill-md",
+      "description": "Help a user contact H & H Custom Cabinetry, request a free quote or appointment, and find the showroom.",
+      "url": "https://hhcustomcabinetry.ca/.well-known/agent-skills/cabinetry-project-inquiries/SKILL.md",
+      "digest": "sha256:50dd578af4d5479b26d705b4b0b231e782e4be4a27069bea1392a7d9ad54348b"
+    }
+  ]
+}

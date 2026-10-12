@@ -1,0 +1,30 @@
+# H & H Custom Cabinetry
+
+> H & H Custom Cabinetry designs custom kitchens, bathroom vanities, built-ins, and storage solutions for homeowners across the Greater Toronto and Hamilton Area (GTHA).
+
+## Primary pages
+
+- [Home](https://hhcustomcabinetry.ca/): Company overview, featured work, and process
+- [Services](https://hhcustomcabinetry.ca/services/): Custom kitchens, vanities, built-ins, and other cabinetry
+- [Gallery](https://hhcustomcabinetry.ca/gallery/): Completed cabinetry projects
+- [About](https://hhcustomcabinetry.ca/about/): Experience, approach, and showroom information
+- [Contact](https://hhcustomcabinetry.ca/contact/): Quote, appointment, telephone, email, and showroom options
+
+## Actions
+
+- [Request a free quote](https://forms.gle/JT1WhXag7zr2zA6SA)
+- [Request an appointment](https://calendar.app.google/NGs2aarphHbUTMZJ6): This submits a request only; the exact date and time are confirmed later by email or phone.
+- [Showroom directions](https://g.page/r/Ca7gNl4WsWvhEBM/)
+
+## Contact
+
+- Phone: 647-296-5035
+- Email: info@hhcustomcabinetry.ca
+- Showroom: 3218 Wharton Way, Mississauga, ON L4X 2C1
+- Service area: Greater Toronto and Hamilton Area (GTHA)
+
+## Machine-readable discovery
+
+- [Full site reference](https://hhcustomcabinetry.ca/llms-full.txt)
+- [Agent capability catalog](https://hhcustomcabinetry.ca/.well-known/ai-catalog.json)
+- [Agent skills index](https://hhcustomcabinetry.ca/.well-known/agent-skills/index.json)

@@ -61,6 +61,7 @@ The site publishes machine-readable business information and agent discovery res
 - `/.well-known/api-catalog`, `/openapi.json`, and the public read-only business information API
 - RFC 8288 discovery links in both HTTP response headers and HTML metadata
 - WebMCP tools for verified business information, quote requests, and appointment requests
+- A stateless Streamable HTTP MCP endpoint at `/mcp` with one read-only `contact_us` tool
 - Content Signals in `/robots.txt`
 
 Markdown negotiation is implemented by `functions/_middleware.js` for Cloudflare Pages. The middleware returns HTML normally and serves the corresponding Markdown asset only when a client explicitly requests `text/markdown`.
@@ -89,7 +90,10 @@ curl https://hhcustomcabinetry.ca/.well-known/ai-catalog.json
 curl https://hhcustomcabinetry.ca/.well-known/agent-skills/index.json
 curl https://hhcustomcabinetry.ca/.well-known/api-catalog
 curl https://hhcustomcabinetry.ca/api/v1/business.json
+curl https://hhcustomcabinetry.ca/.well-known/mcp/server-card.json
 ```
+
+The MCP endpoint is intentionally public and read-only. Its only tool returns verified contact channels and official quote, appointment-request, and showroom links; it does not submit forms or confirm appointments.
 
 ## Contact actions
 

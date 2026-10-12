@@ -30,3 +30,4 @@
 - [Agent skills index](https://hhcustomcabinetry.ca/.well-known/agent-skills/index.json)
 - [Public business information API](https://hhcustomcabinetry.ca/api/v1/business.json)
 - [OpenAPI description](https://hhcustomcabinetry.ca/openapi.json)
+- [Contact MCP Server Card](https://hhcustomcabinetry.ca/.well-known/mcp/server-card.json)

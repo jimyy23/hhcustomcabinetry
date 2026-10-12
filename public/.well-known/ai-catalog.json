@@ -6,6 +6,17 @@
   },
   "entries": [
     {
+      "identifier": "urn:air:hhcustomcabinetry.ca:mcp:contact",
+      "displayName": "H & H Custom Cabinetry Contact MCP Server",
+      "type": "application/mcp-server-card+json",
+      "url": "https://hhcustomcabinetry.ca/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "How can I contact H & H Custom Cabinetry?",
+        "Where can I request a custom cabinetry quote?",
+        "How can I request a showroom appointment?"
+      ]
+    },
+    {
       "identifier": "urn:air:hhcustomcabinetry.ca:api:business-information",
       "displayName": "H & H Custom Cabinetry Business Information API",
       "type": "application/vnd.oai.openapi+json",

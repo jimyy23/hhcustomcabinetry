@@ -1,0 +1,23 @@
+{
+  "serverInfo": {
+    "name": "hh-custom-cabinetry-contact",
+    "title": "H & H Custom Cabinetry Contact",
+    "version": "1.0.0",
+    "description": "Provides verified public contact details and official inquiry links for H & H Custom Cabinetry."
+  },
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://hhcustomcabinetry.ca/mcp"
+  },
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "tools": [
+    {
+      "name": "contact_us",
+      "description": "Get verified contact details and official quote, appointment-request, and showroom links."
+    }
+  ]
+}

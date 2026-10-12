@@ -66,9 +66,9 @@ The site publishes machine-readable business information and agent discovery res
 
 Markdown negotiation is implemented by `functions/_middleware.js` for Cloudflare Pages. The middleware returns HTML normally and serves the corresponding Markdown asset only when a client explicitly requests `text/markdown`.
 
-### Cloudflare DNS follow-up
+### Cloudflare DNS-AID configuration
 
-DNS-AID cannot be configured from the repository. In the Cloudflare dashboard, enable DNSSEC and add this experimental discovery record only if the zone accepts SVCB records:
+The Cloudflare zone publishes these DNS-AID records outside the repository:
 
 ```text
 Type: SVCB
@@ -76,9 +76,15 @@ Name: _index._agents
 Priority: 1
 Target: hhcustomcabinetry.ca
 Parameters: alpn="h2,h3" port=443
+
+Type: SVCB
+Name: _mcp._agents
+Priority: 1
+Target: hhcustomcabinetry.ca
+Parameters: alpn="h2,h3" port=443
 ```
 
-DNS-AID is still an Internet-Draft. Do not publish `_a2a` or `_mcp` records unless real A2A or MCP endpoints are deployed.
+DNSSEC is enabled for the zone and must remain active for agents to authenticate these records. DNS-AID is still an Internet-Draft. Do not publish an `_a2a` record unless a real A2A endpoint is deployed.
 
 After deployment, validate the production site with:
 

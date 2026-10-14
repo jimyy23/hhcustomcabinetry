@@ -9,6 +9,7 @@ import SocialLinks from './SocialLinks.astro';
     <div class="footer-brand">
       <Image src={logo} alt={business.name} width={190} />
       <p>Custom cabinetry designed around your space, your style, and the way you live—across the GTHA.</p>
+      <p class="footer-legal">{business.legalName}</p>
       <SocialLinks light label="Follow H & H Custom Cabinetry" />
     </div>
     <div>
@@ -34,7 +35,7 @@ import SocialLinks from './SocialLinks.astro';
   </div>
   <div class="container footer-bottom">
     <p>© {new Date().getFullYear()} {business.name}. All rights reserved.</p>
-    <p>{business.legalName}</p>
-    <p>Designed by <a href="https://alstra.ca/" target="_blank" rel="noopener noreferrer">Alstra Solutions<span class="sr-only"> (opens in a new tab)</span></a></p>
+    <p>Designed by <a href="https://iuk.ca/" target="_blank" rel="noopener noreferrer">IUK - AI-First Web Design<span class="sr-only"> (opens in a new tab)</span></a></p>
+    <p>Powered by <a href="https://alstra.ca/" target="_blank" rel="noopener noreferrer">Alstra Solutions<span class="sr-only"> (opens in a new tab)</span></a></p>
   </div>
 </footer>

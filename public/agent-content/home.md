@@ -18,7 +18,7 @@ The process includes a free consultation, design and selection, final design, an
 
 - [Request a free quote](https://forms.gle/JT1WhXag7zr2zA6SA)
 - [Request an appointment](https://calendar.app.google/NGs2aarphHbUTMZJ6)
-- Call [647-296-5035](tel:+16472965035)
+- Call [289-643-3963](tel:+12896433963)
 - Email [info@hhcustomcabinetry.ca](mailto:info@hhcustomcabinetry.ca)
 
 An appointment selected through the calendar is a request only. A team member will follow up by email or phone to discuss the project and confirm the exact date and time.

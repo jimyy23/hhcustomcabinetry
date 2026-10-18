@@ -1,8 +1,8 @@
 export const business = {
   name: 'H & H Custom Cabinetry',
   legalName: '9313796 Canada Inc.',
-  phone: '647-296-5035',
-  phoneHref: 'tel:+16472965035',
+  phone: '289-643-3963',
+  phoneHref: 'tel:+12896433963',
   email: 'info@hhcustomcabinetry.ca',
   address: '3218 Wharton Way, Mississauga, ON L4X 2C1',
   mapsUrl: 'https://g.page/r/Ca7gNl4WsWvhEBM/',

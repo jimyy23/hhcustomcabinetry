@@ -16,7 +16,7 @@ Use this skill when a user wants to start or discuss a custom cabinetry project 
 
 - Request a free quote using the official form: https://forms.gle/JT1WhXag7zr2zA6SA
 - Request an appointment using the official calendar: https://calendar.app.google/NGs2aarphHbUTMZJ6
-- Call the business: 647-296-5035
+- Call the business: 289-643-3963
 - Email the business: info@hhcustomcabinetry.ca
 - Get directions to the showroom: https://g.page/r/Ca7gNl4WsWvhEBM/
 

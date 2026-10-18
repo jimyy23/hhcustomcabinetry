@@ -3,8 +3,8 @@ const PROTOCOL_VERSION = '2025-11-25';
 const CONTACT = Object.freeze({
   businessName: 'H & H Custom Cabinetry',
   serviceArea: 'Greater Toronto and Hamilton Area (GTHA)',
-  phone: '647-296-5035',
-  telephoneUri: 'tel:+16472965035',
+  phone: '289-643-3963',
+  telephoneUri: 'tel:+12896433963',
   email: 'info@hhcustomcabinetry.ca',
   showroomAddress: '3218 Wharton Way, Mississauga, ON L4X 2C1',
   showroomDirectionsUrl: 'https://g.page/r/Ca7gNl4WsWvhEBM/',

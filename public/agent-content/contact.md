@@ -2,7 +2,7 @@
 
 H & H Custom Cabinetry serves the Greater Toronto and Hamilton Area (GTHA).
 
-- Phone: [647-296-5035](tel:+16472965035)
+- Phone: [289-643-3963](tel:+12896433963)
 - Email: [info@hhcustomcabinetry.ca](mailto:info@hhcustomcabinetry.ca)
 - Showroom address: 3218 Wharton Way, Mississauga, ON L4X 2C1
 - [Showroom directions](https://g.page/r/Ca7gNl4WsWvhEBM/)
